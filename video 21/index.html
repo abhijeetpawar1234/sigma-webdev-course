@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Inline Style > ID Selector > Class/Attribute/Pseudo-class > Element Selector > Universal Selector */
+
+      /* !important  = 10000 specificity */
+
+      /* h1{
+            color: red;   //specificity 1
+        } */
+
+      /* specificity 1+10 = 11 */
+      h1.cred {
+        color: yellow;
+      }
+
+      /* specificity 10 */
+      .cpurple {
+        color: purple;
+      }
+
+      /* attribute-selector 10 specificity */
+      [data-x="a"] {
+        color: maroon;
+      }
+
+      /* specificity 10 */
+      .yellow {
+        color: red;
+      }
+
+      
+      
+      a.harryclass.rohan-class[href]:hover {
+        color: red;
+      }
+    /*
+      ans: 
+      a = 1 + harryclass = 10 + rohan-class = 10 + href = 10 + hover =10  ===== 41 
+      
+    Universal Selector: 0
+    Element selectors and pseudo-elements: 1
+    Class selectors, attribute selectors, and pseudo-classes: 10
+    ID selectors: 100
+    Inline styles: 1000
+
+    */
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="yellow cred cpurple" data-x="a">CSS Specificity</h1>
+    </div>
+  </body>
+</html>
